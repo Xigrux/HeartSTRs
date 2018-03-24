@@ -84,7 +84,7 @@
   animation-delay: 33.25s;
 }
 
-.path-bit {
+.path-way-2 .path-bit {
   position: relative;
   height: 250px;
   width: 110%;
@@ -96,128 +96,128 @@
 
 /* PATH-BIT ALIGN */
 
-  .path-bit:nth-child(93) {
+  .path-way-2 .path-bit:nth-child(93) {
     left: 30%;
   }
-  .path-bit:nth-child(92) {
+  .path-way-2 .path-bit:nth-child(92) {
     left: 70%;
   }
-  .path-bit:nth-child(91) {
+  .path-way-2 .path-bit:nth-child(91) {
     left: 130%;
   }
-  .path-bit:nth-child(90) {
+  .path-way-2 .path-bit:nth-child(90) {
     left: 200%;
   }
-  .path-bit:nth-child(89) {
+  .path-way-2 .path-bit:nth-child(89) {
     left: 280%;
   }
-  .path-bit:nth-child(88) {
+  .path-way-2 .path-bit:nth-child(88) {
     left: 360%;
   }
-  .path-bit:nth-child(87) {
+  .path-way-2 .path-bit:nth-child(87) {
     left: 380%;
   }
-  .path-bit:nth-child(86) {
+  .path-way-2 .path-bit:nth-child(86) {
     left: 360%;
   }
-  .path-bit:nth-child(85) {
+  .path-way-2 .path-bit:nth-child(85) {
     left: 280%;
   }
-  .path-bit:nth-child(84) {
+  .path-way-2 .path-bit:nth-child(84) {
     left: 200%;
   }
-  .path-bit:nth-child(83) {
+  .path-way-2 .path-bit:nth-child(83) {
     left: 130%;
   }
-  .path-bit:nth-child(82) {
+  .path-way-2 .path-bit:nth-child(82) {
     left: 70%;
   }
-  .path-bit:nth-child(81) {
+  .path-way-2 .path-bit:nth-child(81) {
     left: 30%;
   }
 
-  .path-bit:nth-child(80) {
+  .path-way-2 .path-bit:nth-child(80) {
     left: -30%;
   }
-  .path-bit:nth-child(79) {
+  .path-way-2 .path-bit:nth-child(79) {
     left: -70%;
   }
-  .path-bit:nth-child(78) {
+  .path-way-2 .path-bit:nth-child(78) {
     left: -130%;
   }
-  .path-bit:nth-child(77) {
+  .path-way-2 .path-bit:nth-child(77) {
     left: -200%;
   }
-  .path-bit:nth-child(76) {
+  .path-way-2 .path-bit:nth-child(76) {
     left: -280%;
   }
-  .path-bit:nth-child(75) {
+  .path-way-2 .path-bit:nth-child(75) {
     left: -360%;
   }
-  .path-bit:nth-child(74) {
+  .path-way-2 .path-bit:nth-child(74) {
     left: -380%;
   }
-  .path-bit:nth-child(73) {
+  .path-way-2 .path-bit:nth-child(73) {
     left: -360%;
   }
-  .path-bit:nth-child(72) {
+  .path-way-2 .path-bit:nth-child(72) {
     left: -280%;
   }
-  .path-bit:nth-child(71) {
+  .path-way-2 .path-bit:nth-child(71) {
     left: -200%;
   }
-  .path-bit:nth-child(70) {
+  .path-way-2 .path-bit:nth-child(70) {
     left: -130%;
   }
-  .path-bit:nth-child(69) {
+  .path-way-2 .path-bit:nth-child(69) {
     left: -70%;
   }
-  .path-bit:nth-child(68) {
+  .path-way-2 .path-bit:nth-child(68) {
     left: -30%;
   }
-  .path-bit:nth-child(65) {
+  .path-way-2 .path-bit:nth-child(65) {
     left: 60%;
   }
-  .path-bit:nth-child(64) {
+  .path-way-2 .path-bit:nth-child(64) {
     left: 100%;
   }
-  .path-bit:nth-child(63) {
+  .path-way-2 .path-bit:nth-child(63) {
     left: 110%;
   }
-  .path-bit:nth-child(62) {
+  .path-way-2 .path-bit:nth-child(62) {
     left: 50%;
   }
-  .path-bit:nth-child(61) {
+  .path-way-2 .path-bit:nth-child(61) {
     left: 100%;
   }
-  .path-bit:nth-child(60) {
+  .path-way-2 .path-bit:nth-child(60) {
     left: 40%;
   }
-  .path-bit:nth-child(59) {
+  .path-way-2 .path-bit:nth-child(59) {
     left: -5%;
   }
-  .path-bit:nth-child(58) {
+  .path-way-2 .path-bit:nth-child(58) {
     left: -30%;
   }
-  .path-bit:nth-child(57) {
+  .path-way-2 .path-bit:nth-child(57) {
     left: -70%;
   }
-  .path-bit:nth-child(56) {
+  .path-way-2 .path-bit:nth-child(56) {
     left: -30%;
   }
-  .path-bit:nth-child(55) {
+  .path-way-2 .path-bit:nth-child(55) {
     left: -60%;
   }
-  .path-bit:nth-child(54) {
+  .path-way-2 .path-bit:nth-child(54) {
     left: -100%;
   }
-  .path-bit:nth-child(53) {
+  .path-way-2 .path-bit:nth-child(53) {
     left: -110%;
   }
-  .path-bit:nth-child(52) {
+  .path-way-2 .path-bit:nth-child(52) {
     left: -50%;
   }
-  .path-bit:nth-child(51) {
+  .path-way-2 .path-bit:nth-child(51) {
     left: 0%;
   }
 
