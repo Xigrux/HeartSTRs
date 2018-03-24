@@ -1,1 +1,1 @@
-<?php include_once("mainGame.html"); ?>
+<?php include_once("index.html"); ?>
