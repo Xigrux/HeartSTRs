@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <audio src="audio/Heartstrings.mp3" autoplay> </audio>
+ <audio src="audio/Heartstrings.mp3" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 1000)"></audio> 
   <div class="game-port">
 
 
