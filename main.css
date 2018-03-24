@@ -75,7 +75,7 @@
 
 .ani-move {
   animation: move;
-  animation-duration: 42s;
+  animation-duration: 57s;
   animation-delay: 33.25s;
 }
 
@@ -85,11 +85,6 @@
   width: 10%;
   background-color: blue;
 }
-.ani-move {
-  animation: move 42s;
-  animation-delay: 33.25s;
-}
-
 .death:hover {
   background-color: red;
 }
