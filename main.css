@@ -81,11 +81,10 @@
 
 .path-bit {
   position: relative;
-  height: 100px;
+  height: 200px;
   width: 10%;
   background-color: blue;
 }
-
 .ani-move {
   animation: move 42s;
   animation-delay: 33.25s;
