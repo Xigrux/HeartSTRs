@@ -1,0 +1,64 @@
+.game-port {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.death {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: pink;
+  height: 100vh;
+}
+
+.go{
+  position: absolute;
+  top: 0;
+  width: 5%;
+  background-color: green;
+  height: 100px;
+  overflow: hidden;
+  animation: thin 20s infinite;
+}
+
+.go:nth-child(2){
+  top: 10%;
+  transform: translateX(20%);
+}
+
+.go:nth-child(3){
+  top: 20%;
+  transform: translateX(10%);
+}
+
+.go:nth-child(4){
+  top: 30%;
+  transform: translateX(-10%);
+}
+
+.go:nth-child(5){
+  top: 40%;
+  transform: translateX(20%);
+}
+
+.death:hover {
+  background-color: red;
+}
+
+.pathway {
+  animation: long-roll 10s infinite;
+  background-color: blueviolet;
+}
+
+@keyframes thin {
+  0%   {width: 15%; margin-left: 20%; margin-top:0;}
+  25%  {width: 20%; margin-left: 20%}
+  50%  {width: 15%; margin-left: 10%}
+  75%  {width: 10%; margin-left: -20%}
+  100% {width: 15%; margin-left: 20%; margin-top:100vh;}
+}
+
