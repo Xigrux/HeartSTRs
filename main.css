@@ -1,22 +1,54 @@
+/* CURSORS*/
+
+.path-full{
+  animation: animate 0.25s infinite;
+}
+
+@keyframes animate{
+  0%{ 
+    cursor: url("http://jantimon.nl/running_man/running_man_1.png"), auto;
+  }
+  20%{ 
+    cursor: url("http://jantimon.nl/running_man/running_man_2.png"), auto;
+  }
+  40%{ 
+    cursor: url("http://jantimon.nl/running_man/running_man_3.png"), auto;
+  }
+  60%{ 
+    cursor: url("http://jantimon.nl/running_man/running_man_4.png"), auto;
+  }
+  80%{ 
+    cursor: url("http://jantimon.nl/running_man/running_man_5.png"), auto;
+  }
+  100%{ 
+    cursor: url("http://jantimon.nl/running_man/running_man_1.png"), auto;
+  }
+}
+
+.death {
+  /* cursor: none; */
+}
+
 .game-port {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .death {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: pink;
   height: 100vh;
 }
 
-.go{
-  position: absolute;
+.path-way{
+  position: fixed;
   top: 0;
   width: 5%;
   background-color: green;
@@ -25,22 +57,22 @@
   animation: thin 20s infinite;
 }
 
-.go:nth-child(2){
+.path-way:nth-child(2){
   top: 10%;
   transform: translateX(20%);
 }
 
-.go:nth-child(3){
+.path-way:nth-child(3){
   top: 20%;
   transform: translateX(10%);
 }
 
-.go:nth-child(4){
+.path-way:nth-child(4){
   top: 30%;
   transform: translateX(-10%);
 }
 
-.go:nth-child(5){
+.path-way:nth-child(5){
   top: 40%;
   transform: translateX(20%);
 }
