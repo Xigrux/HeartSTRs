@@ -29,11 +29,24 @@
     /* cursor: none; */
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 .game-port, .path-full, .path-way-2 {
+=======
+.game-port, .path-full {
+  width: 100%;
+  height: 100%;
+>>>>>>> parent of 7a1057b... is that point of the jam when commit messages become journal entries.
+=======
+.game-port, .path-full {
+  width: 100%;
+  height: 100%;
+>>>>>>> parent of 7a1057b... is that point of the jam when commit messages become journal entries.
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .game-port {
@@ -54,8 +67,8 @@
   position: fixed;
   top: 0;
   width: 0%;
-  height: 0vh;
   background-color: green;
+  height: 0vh;
   overflow: hidden;
   animation: thin 35s;
 }
@@ -66,6 +79,8 @@
 
 .path-way-2 {
   position: fixed;
+<<<<<<< HEAD
+<<<<<<< HEAD
   top: -100vh;
   width: 10%;
   height: 20000px;
@@ -489,6 +504,28 @@
 
 
 
+=======
+  top: 0;
+  width: 0%;
+  background-color: purple;
+  height: 0vh;
+  overflow: hidden;
+  animation: move 42s;
+  animation-delay: 33.25s;
+}
+
+>>>>>>> parent of 7a1057b... is that point of the jam when commit messages become journal entries.
+=======
+  top: 0;
+  width: 0%;
+  background-color: purple;
+  height: 0vh;
+  overflow: hidden;
+  animation: move 42s;
+  animation-delay: 33.25s;
+}
+
+>>>>>>> parent of 7a1057b... is that point of the jam when commit messages become journal entries.
 .death:hover {
   background-color: red;
 }
@@ -496,12 +533,12 @@
 @keyframes thin {
   0%   {height: 100vh; width: 15%;}
   33.3333333%  {width: 15%;}
-  73.3333333%  {width: 10%;}
+  73.3333333%  {width: 7%;}
   75% {margin-left: 0%}
   80% {margin-left: 2%}
   83% {margin-left: -2%}
-  84% {margin-left: 5%; width: 7%}
-  85% {margin-left: -5%; width: 7%}
+  84% {margin-left: 5%}
+  85% {margin-left: -5%}
   90% {margin-left: 0%}
   92% {margin-left: -10%}
   93% {margin-left: 10%;}
@@ -510,8 +547,14 @@
 }
 
 @keyframes move {
+<<<<<<< HEAD
   0% {margin-top: 0px}
   3% {margin-top: 100vh;}
   100% {margin-top: 20000px;}
+=======
+  0% {margin-top: -100vh; width: 10%; height: 100vh;}
+  /* 3% {margin-top: 0vh; width: 10%; height: 100vh;} */
+  100% {margin-top: 0vh; width: 10%; height: 100vh;}
+>>>>>>> parent of 7a1057b... is that point of the jam when commit messages become journal entries.
 }
 
