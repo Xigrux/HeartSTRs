@@ -31,217 +31,253 @@
   }
 
 
+/* CONTAINERS */
+  .game-port, .path-full, .path-way-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.game-port, .path-full, .path-way-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.game-port {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
+  .game-port {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
 
-.death {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: pink;
-  height: 100vh;
-}
+  .death {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: pink;
+    height: 100vh;
+  }
 
-.death:hover{
-  background-color: white;
-}
+  .death:hover{
+    background-color: white;
+  }
 
-.path-way-1 {
-  position: fixed;
-  top: 0;
-  width: 0%;
-  background-color: green;
-  height: 0vh;
-  overflow: hidden;
-  animation: thin 35s;
-}
 
-.ani-thin {
-  animation: thin 35s;
-}
+/* PATH 1 */
+  .path-way-1 {
+    position: fixed;
+    top: 0;
+    width: 0%;
+    background-color: green;
+    height: 0vh;
+    overflow: hidden;
+    animation: thin 35s;
+  }
 
-.path-way-2 {
+  .ani-thin {
+    animation: thin 35s;
+  }
+
+  @keyframes thin {
+    0%   {height: 100vh; width: 15%;}
+    33.3333333%  {width: 15%;}
+    73.3333333%  {width: 7%;}
+    75% {margin-left: 0%}
+    80% {margin-left: 2%}
+    83% {margin-left: -2%}
+    84% {margin-left: 5%}
+    85% {margin-left: -5%}
+    90% {margin-left: 0%}
+    92% {margin-left: -10%}
+    93% {margin-left: 10%;}
+    95% {margin-left: 0%; margin-top: 0vh;}
+    100% {height: 100vh; width: 10%; margin-left: 0%; margin-top: 100vh;}
+  }
+
+
+
+/* PATH 2 */
+  .path-way-2 {
+    position: fixed;
+    margin-top: -20000px;
+    width: 0%;
+    height: 20000px;
+    /* background: linear-gradient(to top, red,orange,yellow,green,blue,indigo,violet);  */
+  }
+
+  .ani-move {
+    animation: move cubic-bezier(0,-0.01,.66,1.55);
+    animation-duration: 45s;
+    animation-delay: 33.25s;
+  }
+
+  .path-way-2 .path-bit {
+    position: relative;
+    height: 250px;
+    width: 110%;
+    border-radius: 2em;
+    margin-top: -25px;
+    background-color: blue;
+  }
+
+
+  /* PATH-BIT ALIGN */
+
+    .path-way-2 .path-bit:nth-child(93) {
+      left: 30%;
+    }
+    .path-way-2 .path-bit:nth-child(92) {
+      left: 70%;
+    }
+    .path-way-2 .path-bit:nth-child(91) {
+      left: 130%;
+    }
+    .path-way-2 .path-bit:nth-child(90) {
+      left: 200%;
+    }
+    .path-way-2 .path-bit:nth-child(89) {
+      left: 280%;
+    }
+    .path-way-2 .path-bit:nth-child(88) {
+      left: 360%;
+    }
+    .path-way-2 .path-bit:nth-child(87) {
+      left: 380%;
+    }
+    .path-way-2 .path-bit:nth-child(86) {
+      left: 360%;
+    }
+    .path-way-2 .path-bit:nth-child(85) {
+      left: 280%;
+    }
+    .path-way-2 .path-bit:nth-child(84) {
+      left: 200%;
+    }
+    .path-way-2 .path-bit:nth-child(83) {
+      left: 130%;
+    }
+    .path-way-2 .path-bit:nth-child(82) {
+      left: 70%;
+    }
+    .path-way-2 .path-bit:nth-child(81) {
+      left: 30%;
+    }
+
+    .path-way-2 .path-bit:nth-child(80) {
+      left: -30%;
+    }
+    .path-way-2 .path-bit:nth-child(79) {
+      left: -70%;
+    }
+    .path-way-2 .path-bit:nth-child(78) {
+      left: -130%;
+    }
+    .path-way-2 .path-bit:nth-child(77) {
+      left: -200%;
+    }
+    .path-way-2 .path-bit:nth-child(76) {
+      left: -280%;
+    }
+    .path-way-2 .path-bit:nth-child(75) {
+      left: -360%;
+    }
+    .path-way-2 .path-bit:nth-child(74) {
+      left: -380%;
+    }
+    .path-way-2 .path-bit:nth-child(73) {
+      left: -360%;
+    }
+    .path-way-2 .path-bit:nth-child(72) {
+      left: -280%;
+    }
+    .path-way-2 .path-bit:nth-child(71) {
+      left: -200%;
+    }
+    .path-way-2 .path-bit:nth-child(70) {
+      left: -130%;
+    }
+    .path-way-2 .path-bit:nth-child(69) {
+      left: -70%;
+    }
+    .path-way-2 .path-bit:nth-child(68) {
+      left: -30%;
+    }
+    .path-way-2 .path-bit:nth-child(65) {
+      left: 60%;
+    }
+    .path-way-2 .path-bit:nth-child(64) {
+      left: 100%;
+    }
+    .path-way-2 .path-bit:nth-child(63) {
+      left: 110%;
+    }
+    .path-way-2 .path-bit:nth-child(62) {
+      left: 50%;
+    }
+    .path-way-2 .path-bit:nth-child(61) {
+      left: 100%;
+    }
+    .path-way-2 .path-bit:nth-child(60) {
+      left: 40%;
+    }
+    .path-way-2 .path-bit:nth-child(59) {
+      left: -5%;
+    }
+    .path-way-2 .path-bit:nth-child(58) {
+      left: -30%;
+    }
+    .path-way-2 .path-bit:nth-child(57) {
+      left: -70%;
+    }
+    .path-way-2 .path-bit:nth-child(56) {
+      left: -30%;
+    }
+    .path-way-2 .path-bit:nth-child(55) {
+      left: -60%;
+    }
+    .path-way-2 .path-bit:nth-child(54) {
+      left: -100%;
+    }
+    .path-way-2 .path-bit:nth-child(53) {
+      left: -110%;
+    }
+    .path-way-2 .path-bit:nth-child(52) {
+      left: -50%;
+    }
+    .path-way-2 .path-bit:nth-child(51) {
+      left: 0%;
+    }
+    
+  @keyframes move {
+    0% {margin-top: -20000px; width: 11%;margin-left: 0%;}
+    40% {margin-top: -15000px; width: 8%; margin-left: 0%;}
+    48% {margin-top: -13600px; width: 8%; margin-left: -1%;}
+    90% {margin-top: -1000px; width: 13%; margin-left: 0%;}
+    100% {margin-top: 100vh; width: 0%; margin-left: 0%; }
+  }
+
+
+
+
+.path-way-3 {
   position: fixed;
   margin-top: -20000px;
   width: 0%;
   height: 20000px;
-  /* background: linear-gradient(to top, red,orange,yellow,green,blue,indigo,violet);  */
+  background: linear-gradient(to top, red,orange,yellow,lightyellow,seashell); 
 }
 
-.ani-move {
-  animation: move cubic-bezier(0,-0.01,.66,1.55);
+.ani-flow {
+  animation: flow cubic-bezier(0,-0.01,.66,1.55);
   animation-duration: 45s;
-  animation-delay: 33.25s;
+  animation-delay: 75.25s;
 }
 
-.path-way-2 .path-bit {
+.path-way-3 .path-bit {
   position: relative;
   height: 250px;
   width: 110%;
   border-radius: 2em;
   margin-top: -25px;
-  background-color: blue;
+  background-color: khaki;
 }
 
-
-/* PATH-BIT ALIGN */
-
-  .path-way-2 .path-bit:nth-child(93) {
-    left: 30%;
-  }
-  .path-way-2 .path-bit:nth-child(92) {
-    left: 70%;
-  }
-  .path-way-2 .path-bit:nth-child(91) {
-    left: 130%;
-  }
-  .path-way-2 .path-bit:nth-child(90) {
-    left: 200%;
-  }
-  .path-way-2 .path-bit:nth-child(89) {
-    left: 280%;
-  }
-  .path-way-2 .path-bit:nth-child(88) {
-    left: 360%;
-  }
-  .path-way-2 .path-bit:nth-child(87) {
-    left: 380%;
-  }
-  .path-way-2 .path-bit:nth-child(86) {
-    left: 360%;
-  }
-  .path-way-2 .path-bit:nth-child(85) {
-    left: 280%;
-  }
-  .path-way-2 .path-bit:nth-child(84) {
-    left: 200%;
-  }
-  .path-way-2 .path-bit:nth-child(83) {
-    left: 130%;
-  }
-  .path-way-2 .path-bit:nth-child(82) {
-    left: 70%;
-  }
-  .path-way-2 .path-bit:nth-child(81) {
-    left: 30%;
-  }
-
-  .path-way-2 .path-bit:nth-child(80) {
-    left: -30%;
-  }
-  .path-way-2 .path-bit:nth-child(79) {
-    left: -70%;
-  }
-  .path-way-2 .path-bit:nth-child(78) {
-    left: -130%;
-  }
-  .path-way-2 .path-bit:nth-child(77) {
-    left: -200%;
-  }
-  .path-way-2 .path-bit:nth-child(76) {
-    left: -280%;
-  }
-  .path-way-2 .path-bit:nth-child(75) {
-    left: -360%;
-  }
-  .path-way-2 .path-bit:nth-child(74) {
-    left: -380%;
-  }
-  .path-way-2 .path-bit:nth-child(73) {
-    left: -360%;
-  }
-  .path-way-2 .path-bit:nth-child(72) {
-    left: -280%;
-  }
-  .path-way-2 .path-bit:nth-child(71) {
-    left: -200%;
-  }
-  .path-way-2 .path-bit:nth-child(70) {
-    left: -130%;
-  }
-  .path-way-2 .path-bit:nth-child(69) {
-    left: -70%;
-  }
-  .path-way-2 .path-bit:nth-child(68) {
-    left: -30%;
-  }
-  .path-way-2 .path-bit:nth-child(65) {
-    left: 60%;
-  }
-  .path-way-2 .path-bit:nth-child(64) {
-    left: 100%;
-  }
-  .path-way-2 .path-bit:nth-child(63) {
-    left: 110%;
-  }
-  .path-way-2 .path-bit:nth-child(62) {
-    left: 50%;
-  }
-  .path-way-2 .path-bit:nth-child(61) {
-    left: 100%;
-  }
-  .path-way-2 .path-bit:nth-child(60) {
-    left: 40%;
-  }
-  .path-way-2 .path-bit:nth-child(59) {
-    left: -5%;
-  }
-  .path-way-2 .path-bit:nth-child(58) {
-    left: -30%;
-  }
-  .path-way-2 .path-bit:nth-child(57) {
-    left: -70%;
-  }
-  .path-way-2 .path-bit:nth-child(56) {
-    left: -30%;
-  }
-  .path-way-2 .path-bit:nth-child(55) {
-    left: -60%;
-  }
-  .path-way-2 .path-bit:nth-child(54) {
-    left: -100%;
-  }
-  .path-way-2 .path-bit:nth-child(53) {
-    left: -110%;
-  }
-  .path-way-2 .path-bit:nth-child(52) {
-    left: -50%;
-  }
-  .path-way-2 .path-bit:nth-child(51) {
-    left: 0%;
-  }
-
-@keyframes thin {
-  0%   {height: 100vh; width: 15%;}
-  33.3333333%  {width: 15%;}
-  73.3333333%  {width: 7%;}
-  75% {margin-left: 0%}
-  80% {margin-left: 2%}
-  83% {margin-left: -2%}
-  84% {margin-left: 5%}
-  85% {margin-left: -5%}
-  90% {margin-left: 0%}
-  92% {margin-left: -10%}
-  93% {margin-left: 10%;}
-  95% {margin-left: 0%; margin-top: 0vh;}
-  100% {height: 100vh; width: 10%; margin-left: 0%; margin-top: 100vh;}
-}
-
-@keyframes move {
+@keyframes flow {
   0% {margin-top: -20000px; width: 11%;margin-left: 0%;}
-  40% {margin-top: -15000px; width: 8%; margin-left: 0%;}
-  48% {margin-top: -13600px; width: 8%; margin-left: -1%;}
-  90% {margin-top: -1000px; width: 13%; margin-left: 0%;}
   100% {margin-top: 100vh; width: 0%; margin-left: 0%; }
 }
-
