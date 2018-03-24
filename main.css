@@ -1,41 +1,47 @@
 /* CURSORS*/
 
-.path-full{
-  animation: animate 0.25s infinite;
-}
+  .path-full{
+    animation: animate 0.25s infinite;
+  }
 
-@keyframes animate{
-  0%{ 
-    cursor: url("http://jantimon.nl/running_man/running_man_1.png"), auto;
+  @keyframes animate{
+    0%{ 
+      cursor: url("http://jantimon.nl/running_man/running_man_1.png"), auto;
+    }
+    20%{ 
+      cursor: url("http://jantimon.nl/running_man/running_man_2.png"), auto;
+    }
+    40%{ 
+      cursor: url("http://jantimon.nl/running_man/running_man_3.png"), auto;
+    }
+    60%{ 
+      cursor: url("http://jantimon.nl/running_man/running_man_4.png"), auto;
+    }
+    80%{ 
+      cursor: url("http://jantimon.nl/running_man/running_man_5.png"), auto;
+    }
+    100%{ 
+      cursor: url("http://jantimon.nl/running_man/running_man_1.png"), auto;
+    }
   }
-  20%{ 
-    cursor: url("http://jantimon.nl/running_man/running_man_2.png"), auto;
-  }
-  40%{ 
-    cursor: url("http://jantimon.nl/running_man/running_man_3.png"), auto;
-  }
-  60%{ 
-    cursor: url("http://jantimon.nl/running_man/running_man_4.png"), auto;
-  }
-  80%{ 
-    cursor: url("http://jantimon.nl/running_man/running_man_5.png"), auto;
-  }
-  100%{ 
-    cursor: url("http://jantimon.nl/running_man/running_man_1.png"), auto;
-  }
-}
 
-.death {
-  /* cursor: none; */
-}
+  .death {
+    /* cursor: none; */
+  }
 
-.game-port {
+.game-port, .path-full {
   width: 100%;
   height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+}
+
+.game-port {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -47,35 +53,16 @@
   height: 100vh;
 }
 
-.path-way{
+.path-way-1 {
   position: fixed;
   top: 0;
   width: 5%;
   background-color: green;
-  height: 170px;
+  height: 100vh;
   overflow: hidden;
-  animation: thin 20s infinite;
+  animation: thin 35s infinite;
 }
 
-.path-way:nth-child(2){
-  top: 10%;
-  transform: translateX(20%);
-}
-
-.path-way:nth-child(3){
-  top: 20%;
-  transform: translateX(10%);
-}
-
-.path-way:nth-child(4){
-  top: 30%;
-  transform: translateX(-10%);
-}
-
-.path-way:nth-child(5){
-  top: 40%;
-  transform: translateX(20%);
-}
 
 .death:hover {
   background-color: red;
@@ -87,10 +74,17 @@
 }
 
 @keyframes thin {
-  0%   {width: 15%; margin-left: 20%; margin-top:0;}
-  25%  {width: 20%; margin-left: 20%}
-  50%  {width: 15%; margin-left: 10%}
-  75%  {width: 10%; margin-left: -20%}
-  100% {width: 15%; margin-left: 20%; margin-top:100vh;}
+  0%   {width: 15%;}
+  33.3333333%  {width: 15%;}
+  73.3333333%  {width: 7%;}
+  75% {margin-left: 0%}
+  80% {margin-left: 2%}
+  83% {margin-left: -2%}
+  84% {margin-left: 5%}
+  85% {margin-left: -5%}
+  90% {margin-left: 0%}
+  92% {margin-left: -10%}
+  93% {margin-left: 10%}
+  100% {width: 10%; margin-left: 0%}
 }
 
