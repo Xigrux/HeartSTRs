@@ -60,6 +60,11 @@
   overflow: hidden;
   animation: thin 35s;
 }
+
+.ani-thin {
+  animation: thin 35s;
+}
+
 .path-way-2 {
   position: fixed;
   top: 0;
@@ -67,7 +72,15 @@
   height: 0vh;
   background-color: purple;
   overflow: hidden;
+}
+
+.ani-move {
   animation: move 42s;
+  animation-delay: 33.25s;
+}
+
+.ani-moving {
+  animation: moving 42s;
   animation-delay: 33.25s;
 }
 
@@ -101,6 +114,13 @@
 
 @keyframes move {
   0% {margin-top: -100vh; width: 10%; height: 100vh;}
+  3% {margin-top: 0vh; width: 10%; height: 100vh;}
+
+  100% {margin-top: 0vh; width: 10%; height: 100vh;}
+}
+
+@keyframes moving {
+  0% {margin-top: -100vh; width: 10%; height: 100vh; background-color:fuchsia}
   3% {margin-top: 0vh; width: 10%; height: 100vh;}
 
   100% {margin-top: 0vh; width: 10%; height: 100vh;}
