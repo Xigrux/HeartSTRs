@@ -191,8 +191,8 @@
 
   .txtr-marble {
    background-image: url(/assets/marble.png);
-   background-size: cover;
-   background-repeat: no-repeat;
+   background-size: contain;
+    background-repeat: round;
   }
 
   .path-way-2 .path-bit {
@@ -208,7 +208,8 @@
     border-top-right-radius: 1.4em;
     border-bottom-left-radius: 2.1em;
     border-bottom-right-radius: 1.9em;
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .path-way-2 .path-bit:nth-child(3n+7) {
@@ -223,7 +224,8 @@
     border-top-right-radius: 0.7em;
     border-bottom-left-radius: 1.3em;
     border-bottom-right-radius: 2.1em;
-    background-size: 700px 300px;
+    background-size: 700px 500px;
+    background-repeat: repeat;
   }
 
   .path-way-2 .path-bit:nth-child(-n+20) {
