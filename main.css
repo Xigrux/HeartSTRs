@@ -425,25 +425,25 @@
     margin-top: 3px; 
   }
 
-  label:nth-last-of-type(4) {
+  .path-way-1 label:nth-last-of-type(4) {
     top: 55vh;
     left: 1%;
     background-color: #111;
   }
 
-  label:nth-last-of-type(1) {
+  .path-way-1 label:nth-last-of-type(1) {
     top: 44vh;
     background-color:#222;
     animation-delay: 3s;
   }
 
-  label:nth-last-of-type(2) {
+  .path-way-1 label:nth-last-of-type(2) {
     top: 33vh;
     background-color: #333;
     animation-delay: 5s;
   }
 
-  label:nth-last-of-type(3) {
+  .path-way-1 label:nth-last-of-type(3) {
     top: 22vh;
     background-color: #444;
     animation-delay: 7s;
@@ -580,6 +580,17 @@
   width: 300px;
   height: 300px;
   transform: translateY(-45%);
+  animation: finally forwards ease 3s;
+  animation-delay: 110s;
+}
+
+@keyframes finally {
+
+  100% {
+    top: 101vh;
+    left: 92vw;
+    transform: translateY(-45%) scale(6);
+  }
 }
 
 .ring {
