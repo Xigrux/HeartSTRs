@@ -44,6 +44,31 @@ body {
     overflow: hidden;
   }
 
+  .glitching {
+    position: absolute;
+    display:inline;
+    z-index: 1000;
+    background-image: url(/assets/glitch.gif);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    animation: glitcher 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  @keyframes glitcher {
+    0% {opacity: 0.6}
+    10% {opacity: 0.4}
+    20% {opacity: 0.2}
+    30% {opacity: 1}
+    40% {opacity: 0.4}
+    50% {opacity: 0.1}
+    60% {opacity: 1}
+    70% {opacity: 0.7}
+    80% {opacity: 1}
+    90% {opacity: 0.2}
+    100% {opacity: 0}
+  }
+
   .game-port-start {
     cursor: pointer;
     margin: auto;
@@ -96,14 +121,27 @@ body {
     height: 100vh;
   }
 
-  .death:hover{
+  .death:hover {
     background-color: white;
   }
 
-  .death:hover ~ .path-full .path-way-1 .test{
-    
+  .death:hover ~ .path-full {
+    animation: screenShake 0.5s ease infinite;
+    display: inline;
   }
-
+  
+  @keyframes screenShake {
+    0% {position:relative; left: 10px}
+    10% {position:relative; left: -40px}
+    20% {position:relative; left: 2px}
+    30% {position:relative; left: -89px}
+    40% {position:relative; left: 27px}
+    50% {position:relative; left: -23px}
+    60% {position:relative; left: 65px}
+    70% {position:relative; left: -100px}
+    80% {position:relative; left: 89px}
+    90% {position:relative; left: -8px}
+  }
 
 /* PATH 1 */
   .path-way-1 {
@@ -125,7 +163,7 @@ body {
 
   @keyframes thin {
     0%   {opacity:0.1; height: 100vh; width: 15%;}
-    33.3333333%  {width: 15%;}
+    33.3333333%  {opacity: 1; width: 15%;}
     73.3333333%  {width: 7%;}
     75% {margin-left: 0%}
     80% {margin-left: 2%}
@@ -136,7 +174,7 @@ body {
     92% {margin-left: -10%}
     93% {margin-left: 10%;}
     95% {margin-left: 0%; margin-top: 0vh;}
-    100% {opacity: 1; height: 100vh; width: 10%; margin-left: 0%; margin-top: 100vh;}
+    100% { height: 100vh; width: 10%; margin-left: 0%; margin-top: 100vh;}
   }
 
 
@@ -161,12 +199,47 @@ body {
     height: 250px;
     width: 110%;
     margin-top: -25px;
-    background-color: #999;
-    border-right: 1px #888;
-    border-left: 1px #888;
-    animation: squareUp linear;
+    box-shadow: inset 0px 0px 5px #999999;
+    animation: squareUp ease-in-out;
     animation-duration: 45s;
     animation-delay: 33.25s;
+  }
+
+  .txtr-marble {
+   background-image: url(/assets/marble.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+  }
+
+  .path-way-2 .path-bit {
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 1.4em;
+    border-bottom-left-radius: 1.8em;
+    border-bottom-right-radius: 2.2em;
+  }
+
+  .path-way-2 .path-bit:nth-child(2n+3) {
+    border-top-left-radius: 3em;
+    border-top-right-radius: 1.4em;
+    border-bottom-left-radius: 2.1em;
+    border-bottom-right-radius: 1.9em;
+  }
+
+  .path-way-2 .path-bit:nth-child(3n+7) {
+    border-top-left-radius: 0.7em;
+    border-top-right-radius: 2.4em;
+    border-bottom-left-radius: 1.8em;
+    border-bottom-right-radius: 1.9em;
+  }
+  .path-way-2 .path-bit:nth-child(4n-5) {
+    border-top-left-radius: 2.5em;
+    border-top-right-radius: 0.7em;
+    border-bottom-left-radius: 1.3em;
+    border-bottom-right-radius: 2.1em;
+  }
+
+  .path-way-2 .path-bit:nth-child(-n+20) {
+    border-radius: 0;
   }
 
 
@@ -298,7 +371,7 @@ body {
     }
     
   @keyframes move {
-    0% {margin-top: -20000px; width: 11%;margin-left: 0%;}
+    0% { margin-top: -20000px; width: 11%;margin-left: 0%;}
     40% {margin-top: -15000px; width: 8%; margin-left: 0%;}
     48% {margin-top: -13600px; width: 8%; margin-left: -1%;}
     90% {margin-top: -1000px; width: 13%; margin-left: 0%;}
@@ -306,10 +379,9 @@ body {
   }
 
   @keyframes squareUp {
-    0% {border-radius: 3em}
-    70% {border-radius: 1em}
-    95% {border-radius: 0em}
-    100% {border-radius: 0em}
+    0% {background-color: #222;}
+    50% {background-color: rgb(209, 209, 209);}
+    100% {background-color: rgb(255, 255, 255);}
   }
 
 
