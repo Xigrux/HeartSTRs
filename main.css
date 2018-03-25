@@ -425,25 +425,25 @@
     margin-top: 3px; 
   }
 
-  label:nth-last-of-type(4) {
+  .path-way-1 label:nth-of-type(4) {
     top: 55vh;
     left: 1%;
     background-color: #111;
   }
 
-  label:nth-last-of-type(1) {
+  .path-way-1 label:nth-of-type(1) {
     top: 44vh;
     background-color:#222;
     animation-delay: 3s;
   }
 
-  label:nth-last-of-type(2) {
+  .path-way-1 label:nth-of-type(2) {
     top: 33vh;
     background-color: #333;
     animation-delay: 5s;
   }
 
-  label:nth-last-of-type(3) {
+  .path-way-1 label:nth-of-type(3) {
     top: 22vh;
     background-color: #444;
     animation-delay: 7s;
@@ -766,18 +766,38 @@
   }
 }
 
-input[type=checkbox]:checked:nth-last-of-type(1) ~ .ring-group .ring:nth-child(1) {
+input[type=checkbox]:checked:nth-of-type(5) {
+  background-color:red;
+}
+
+input[type=checkbox]:checked:nth-of-type(1) ~ .ring-group .ring:nth-of-type(1) {
   display: block !important;
 } 
 
-input[type=checkbox]:checked:nth-last-of-type(2) ~ .ring-group .ring:nth-child(2) {
+input[type=checkbox]:checked:nth-of-type(2) ~ .ring-group .ring:nth-of-type(2) {
   display: block !important;
 } 
 
-input[type=checkbox]:checked:nth-last-of-type(3) ~ .ring-group .ring:nth-child(3) {
+input[type=checkbox]:checked:nth-of-type(3) ~ .ring-group .ring:nth-of-type(3) {
   display: block !important;
 } 
 
-input[type=checkbox]:checked:nth-last-of-type(4) ~ .ring-group .ring:nth-child(4) {
+input[type=checkbox]:checked:nth-of-type(4) ~ .ring-group .ring:nth-of-type(4) {
+  display: block !important;
+} 
+
+input[type=checkbox]:checked:nth-of-type(5) ~ .ring-group .ring {
+  display: block !important;
+} 
+
+input[type=checkbox]:checked:nth-of-type(6) ~ .ring-group .ring:nth-of-type(6) {
+  display: block !important;
+} 
+
+input[type=checkbox]:checked:nth-of-type(7) ~ .ring-group .ring:nth-of-type(7) {
+  display: block !important;
+} 
+
+input[type=checkbox]:checked:nth-of-type(8) ~ .ring-group .ring:nth-of-type(8) {
   display: block !important;
 } 
