@@ -121,40 +121,14 @@
     box-shadow: 0px 10px 20px #999999;
   }
 
-  .game-port-start:hover div, .game-port-end:hover div  {
+  .game-port-start:hover div{
+    top: 89px;
+  }
+
+  .game-port-end:hover div  {
     top: 57px;
   }
-
-  .death {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #eee;
-    height: 100vh;
-  }
-
-  .death:hover {
-    background-color: white;
-  }
-
-  .death:hover ~ .path-full {
-    animation: screenShake 0.5s ease infinite;
-    display: inline;
-  }
-  
-  @keyframes screenShake {
-    0% {position:relative; left: 10px}
-    10% {position:relative; left: -40px}
-    20% {position:relative; left: 2px}
-    30% {position:relative; left: -89px}
-    40% {position:relative; left: 27px}
-    50% {position:relative; left: -23px}
-    60% {position:relative; left: 65px}
-    70% {position:relative; left: -100px}
-    80% {position:relative; left: 89px}
-    90% {position:relative; left: -8px}
-  }
-
+ 
 /* PATH 1 */
   .path-way-1 {
     position: fixed;
@@ -226,6 +200,7 @@
     border-top-right-radius: 1.4em;
     border-bottom-left-radius: 1.8em;
     border-bottom-right-radius: 2.2em;
+    background-size: 300px 900px;
   }
 
   .path-way-2 .path-bit:nth-child(2n+3) {
@@ -233,6 +208,7 @@
     border-top-right-radius: 1.4em;
     border-bottom-left-radius: 2.1em;
     border-bottom-right-radius: 1.9em;
+    background-size: contain;
   }
 
   .path-way-2 .path-bit:nth-child(3n+7) {
@@ -240,12 +216,14 @@
     border-top-right-radius: 2.4em;
     border-bottom-left-radius: 1.8em;
     border-bottom-right-radius: 1.9em;
+    background-size: 300%;
   }
   .path-way-2 .path-bit:nth-child(4n-5) {
     border-top-left-radius: 2.5em;
     border-top-right-radius: 0.7em;
     border-bottom-left-radius: 1.3em;
     border-bottom-right-radius: 2.1em;
+    background-size: 700px 300px;
   }
 
   .path-way-2 .path-bit:nth-child(-n+20) {
@@ -430,11 +408,11 @@
     visibility: hidden;
   }
   .token {
-    position: absolute;
+    position: relative;
     border-radius: 50%;
     top: 0px;
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     background-color: #222;
     animation: ripple infinite ease-in 0.81s;
     transition: all 0.2s ease;
@@ -446,57 +424,75 @@
     margin-top: 3px; 
   }
 
+  label:nth-last-of-type(4) {
+    top: 55vh;
+    left: 1%;
+    background-color: #111;
+  }
+
   label:nth-last-of-type(1) {
-    top: 60px;
-    background-color: rgb(52, 202, 195);
+    top: 44vh;
+    background-color:#222;
+    animation-delay: 3s;
   }
 
   label:nth-last-of-type(2) {
-    top: 30px;
-    background-color: rgb(79, 52, 202);
+    top: 33vh;
+    background-color: #333;
+    animation-delay: 5s;
   }
 
   label:nth-last-of-type(3) {
-    top: 90px;
-    background-color: rgb(202, 52, 177);
+    top: 22vh;
+    background-color: #444;
+    animation-delay: 7s;
   }
 
 
   @keyframes ripple {
     0% {
+      display: inline-block !important;
       box-shadow: 0 0 0 0 #22222200,
                   0 0 0 0 #22222277,
                   0 0 0 0 #22222255;
     }
     10% {
+      display: inline-block !important;
       box-shadow: 0 0 0 1px #22222299,
                   0 0 0 0 #22222233,
                   0 0 0 0 #22222244;
+      margin-top: 3px
     }
     15% {
+      display: inline-block !important;
       box-shadow: 0 0 0 2px #22222277,
                   0 0 0 0 #22222200,
                   0 0 0 0 #22222222;
     }
     30% {
+      display: inline-block !important;
       box-shadow: 0 0 0 3px #22222255,
                   0 0 0 2px #22222222,
                    0 0 0 0 #22222200;
     }
     60% {
+      display: inline-block !important;
       box-shadow: 0 0 0 6px #22222233,
                   0 0 0 3px #22222277,
                   0 0 0 2px #22222211;
     }
     75% {
+      display: inline-block !important;
       box-shadow: 0 0 0 12px #22222222,
                   0 0 0 6px #22222288,
                   0 0 0 3px #22222255;
     }
     100% {
+      display: inline-block !important;
       box-shadow: 0 0 0 20px #22222200,
                   0 0 12px #22222200,
                   0 0 0 6px #22222200;
+                  margin-top: 0px;
     }
   }
 
@@ -541,3 +537,33 @@
     100% {z-index: 2000; display: inline; opacity: 1; height: 100vh;}
   }
 
+/* DEATH */
+  .death {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #eee;
+    height: 100vh;
+  }
+
+  .death:hover {
+    background-color: white;
+  }
+
+  .death:hover ~ .path-full {
+    animation: screenShake 0.5s ease infinite;
+    display: inline;
+  }
+
+  @keyframes screenShake {
+    0% {position:relative; left: 10px}
+    10% {position:relative; left: -40px}
+    20% {position:relative; left: 2px}
+    30% {position:relative; left: -89px}
+    40% {position:relative; left: 27px}
+    50% {position:relative; left: -23px}
+    60% {position:relative; left: 65px}
+    70% {position:relative; left: -100px}
+    80% {position:relative; left: 89px}
+    90% {position:relative; left: -8px}
+  }
