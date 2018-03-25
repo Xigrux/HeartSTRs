@@ -436,7 +436,7 @@
     width: 20px;
     height: 20px;
     background-color: #222;
-    animation: ripple infinite ease-in 1s;
+    animation: ripple infinite ease-in 0.81s;
     transition: all 0.2s ease;
   }
 
