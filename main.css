@@ -459,3 +459,15 @@ body {
     display:none;
     background-color: royalblue;
   }
+
+  .end {
+    animation: ending;
+    animation-duration: 3s;
+    animation-delay: 110s;
+    animation-fill-mode: forwards;
+  }
+   
+  @keyframes ending {
+    0% {z-index: 2000; display: inline; opacity: 0; height: 100vh;}
+    100% {z-index: 2000; display: inline; opacity: 1; height: 100vh;}
+  }
