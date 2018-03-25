@@ -155,11 +155,10 @@
     height: 0vh;
     overflow: hidden;
     box-shadow: 0px 0px 10px #222;
-    animation: thin 35s;
   }
 
   .ani-thin {
-    animation: thin 35s;
+    animation: thin 36s;
   }
 
   @keyframes thin {
@@ -168,14 +167,12 @@
     73.3333333%  {width: 7%;}
     75% {margin-left: 0%}
     80% {margin-left: 2%}
-    83% {margin-left: -2%}
-    84% {margin-left: 5%}
-    85% {margin-left: -5%}
+    86% {margin-left: -2%}
+    87% {margin-left: 5%}
+    88% {margin-left: -5%}
     90% {margin-left: 0%}
-    92% {margin-left: -10%}
-    93% {margin-left: 10%;}
-    95% {margin-left: 0%; margin-top: 0vh;}
-    100% { height: 100vh; width: 10%; margin-left: 0%; margin-top: 100vh;}
+    93% {margin-left: 0%;margin-top: 0vh;}
+    100% {height: 100vh; width: 10%; margin-left: 0%; margin-top: 100vh;}
   }
 
 
@@ -184,6 +181,7 @@
   .path-way-2 {
     position: fixed;
     margin-top: -20000px;
+    top: -10vh;
     width: 0%;
     height: 20000px;
     /* background: linear-gradient(to top, red,orange,yellow,green,blue,indigo,violet);  */
@@ -192,7 +190,7 @@
   .ani-move {
     animation: move cubic-bezier(0,-0.01,.66,1.55);
     animation-duration: 45s;
-    animation-delay: 33.25s;
+    animation-delay: 34.25s;
   }
 
   .path-way-2 .path-bit {
@@ -203,7 +201,7 @@
     box-shadow: inset 0px 0px 5px #999999;
     animation: squareUp ease-in-out;
     animation-duration: 45s;
-    animation-delay: 33.25s;
+    animation-delay: 34.25s;
   }
 
   .txtr-marble {
@@ -374,7 +372,7 @@
   @keyframes move {
     0% { margin-top: -20000px; width: 11%;margin-left: 0%;}
     40% {margin-top: -15000px; width: 8%; margin-left: 0%;}
-    48% {margin-top: -13600px; width: 8%; margin-left: -1%;}
+    50% {margin-top: -13600px; width: 8%; margin-left: -1%;}
     90% {margin-top: -1000px; width: 13%; margin-left: 0%;}
     100% {margin-top: 100vh; width: 0%; margin-left: 0%;}
   }
@@ -428,14 +426,30 @@
     height: 20px;
     background-color: #222;
     animation: ripple infinite ease-in 1s;
-    transition: all 0.8s ease;
+    transition: all 0.2s ease;
   }
 
   .token:hover {
     border: white 2px solid;
-    box-shadow: 0 5px 6px rgb(255, 222, 179);
+    box-shadow: 0 0 6px rgb(255, 222, 179);
     margin-top: 3px; 
   }
+
+  label:nth-last-of-type(1) {
+    top: 60px;
+    background-color: rgb(52, 202, 195);
+  }
+
+  label:nth-last-of-type(2) {
+    top: 30px;
+    background-color: rgb(79, 52, 202);
+  }
+
+  label:nth-last-of-type(3) {
+    top: 90px;
+    background-color: rgb(202, 52, 177);
+  }
+
 
   @keyframes ripple {
     0% {
