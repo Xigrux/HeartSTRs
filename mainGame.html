@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,14 @@
 
     <div class="path-full">
 
-      <div class="path-way-1 ani-thin">    
+      <div class="path-way-1 ani-thin">
+        <input type="checkbox" id="token-1" name="selector"></input>
+        <label class="token" for="token-1"></label>
+        <input type="checkbox" id="token-2" name="selector"></input>
+        <label class="token" for="token-2"></label>
+        <input type="checkbox" id="token-3" name="selector"></input>
+        <label class="token" for="token-3"></label>
+        <div class="test" id="test"></div>
       </div>
 
       <div class="path-way-2 ani-move">
@@ -132,5 +140,12 @@
 
     </div>
   </div>
+  <!-- <script>
+    $(document).ready(function() {     
+      $('.death').hover(function(){     
+          $('.test').addClass('disabled');    
+      })
+    });   
+  </script> -->
   
 </body>

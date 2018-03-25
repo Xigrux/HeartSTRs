@@ -1,6 +1,9 @@
 /* CURSORS*/
 
-  .path-full{
+body {
+  cursor: none;
+  }
+  .path-full, label{
     cursor: pointer;
     animation: animate 0.25s infinite;
   }
@@ -26,9 +29,6 @@
     }
   }
 
-  body {
-    cursor: none;
-  }
 
 
 /* CONTAINERS */
@@ -100,6 +100,10 @@
     background-color: white;
   }
 
+  .death:hover ~ .path-full .path-way-1 .test{
+    
+  }
+
 
 /* PATH 1 */
   .path-way-1 {
@@ -156,11 +160,13 @@
     position: relative;
     height: 250px;
     width: 110%;
-    border-radius: 2em;
     margin-top: -25px;
     background-color: #999;
     border-right: 1px #888;
     border-left: 1px #888;
+    animation: squareUp linear;
+    animation-duration: 45s;
+    animation-delay: 33.25s;
   }
 
 
@@ -296,43 +302,88 @@
     40% {margin-top: -15000px; width: 8%; margin-left: 0%;}
     48% {margin-top: -13600px; width: 8%; margin-left: -1%;}
     90% {margin-top: -1000px; width: 13%; margin-left: 0%;}
-    100% {margin-top: 100vh; width: 0%; margin-left: 0%; }
+    100% {margin-top: 100vh; width: 0%; margin-left: 0%;}
+  }
+
+  @keyframes squareUp {
+    0% {border-radius: 3em}
+    70% {border-radius: 1em}
+    95% {border-radius: 0em}
+    100% {border-radius: 0em}
   }
 
 
 
 
-.path-way-3 {
-  position: fixed;
-  margin-top: -20000px;
-  width: 0%;
-  height: 20000px;
-  background: linear-gradient(to top, rgb(255, 85, 85),orange,rgb(255, 230, 0),lightyellow,seashell); 
-  transform: skewY(20deg);
-}
+/* PATH 3 */
+  .path-way-3 {
+    position: fixed;
+    margin-top: -20000px;
+    width: 0%;
+    height: 20000px;
+    background: linear-gradient(to top, rgb(255, 85, 85),orange,rgb(255, 230, 0),lightyellow,seashell); 
+    transform: skewY(20deg);
+  }
 
-.ani-flow {
-  animation: flow ease-in-out;
-  animation-duration: 36s;
-  animation-delay: 73.25s;
-}
+  .ani-flow {
+    animation: flow ease-in-out;
+    animation-duration: 36s;
+    animation-delay: 73.25s;
+  }
 
-.path-way-3 .path-bit {
-  position: relative;
-  height: 250px;
-  width: 110%;
-  border-radius: 2em;
-  margin-top: -25px;
-  background-color: khaki;
-}
+  @keyframes flow {
+    0% {opacity:0; filter: saturate(0.0);transform: rotate(0deg); margin-top: -20000px; width: 11%;margin-left: 0%; }
+    20% {opacity:0.3; filter: saturate(0.1); transform: rotate(0deg); margin-left: 0%;}
+    35% {filter: saturate(0.7); transform: rotate(-7deg); margin-left: -5%;}
+    50% {opacity:1; transform: rotate(5deg); margin-left: 25%;}
+    60% {transform: rotate(-2deg); margin-left: -17%;}
+    80% {filter: saturate(1); margin-left: -2%;}
+    90% {margin-left: 1%;}
+    100% {margin-top: 100vh; width: 0%; margin-left: 0%; }
+  }
 
-@keyframes flow {
-  0% {opacity:0; filter: saturate(0.0);transform: rotate(0deg); margin-top: -20000px; width: 11%;margin-left: 0%; }
-  20% {opacity:0.3; filter: saturate(0.1); transform: rotate(0deg); margin-left: 0%;}
-  35% {filter: saturate(0.7); transform: rotate(-7deg); margin-left: -5%;}
-  50% {opacity:1; transform: rotate(5deg); margin-left: 25%;}
-  60% {transform: rotate(-2deg); margin-left: -17%;}
-  80% {filter: saturate(1); margin-left: -2%;}
-  90% {margin-left: 1%;}
-  100% {margin-top: 100vh; width: 0%; margin-left: 0%; }
-}
+/* TOKENS */
+  
+  input{
+    visibility: hidden;
+  }
+  .token {
+    position: absolute;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+  }
+
+  label:nth-last-of-type(1) {
+    top: 30px;
+    background-color: blue;
+  }
+
+  label:nth-last-of-type(2) {
+    top: 60px;
+    background-color: rgb(52, 202, 195);
+  }
+
+
+
+  .test {
+    background-color: purple;
+    position: relative;
+    top: 200px;
+    width: 200px;
+    height: 200px;
+  }
+
+  input[type=checkbox]:checked:nth-last-of-type(2) ~ .test{
+    background-color: green;
+  }
+
+  input[type=checkbox]:checked + .token {
+    display: none;
+  }
+
+  .disabled {
+    display:none;
+    background-color: royalblue;
+  }
