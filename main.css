@@ -33,7 +33,7 @@
 
 
 /* CONTAINERS */
-  .game-port, .game-port-start, .path-full, .path-way-2 {
+  .game-port, .game-port-start, .game-port-end, .path-full, .path-way-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,7 +70,7 @@
     100% {opacity: 0}
   }
 
-  .game-port-start {
+  .game-port-start, .game-port-end {
     cursor: pointer;
     margin: auto;
     position: relative;
@@ -84,7 +84,7 @@
     transition: all 0.5s ease;
   }
 
-  a, a:hover {
+  a, a:hover, a.game-port-end, a.game-port-end:hover {
     text-decoration: none;
     color: #222;
     font-size: 60px;
@@ -92,8 +92,14 @@
     font-weight: bolder;
     line-height: 1;
   }
+  a.game-port-end, a.game-port-end:hover {
+    text-decoration: none;
+    font-size:60px;
+    line-height: 0.85;
+    letter-spacing: 9px;
+  }
 
-  a div {
+  a div, a.game-port-end div {
     position: relative;
     top: 102px;
     left: 10px;
@@ -101,17 +107,22 @@
     transition: all 0.15s ease;
   }
 
+  a.game-port-end div {
+    top: 64px;
+    left: 6px;
+  }
+
   sup {
     top: 0px;
   }
 
-  .game-port-start:hover {
+  .game-port-start:hover, .game-port-end:hover {
     top: 29vh;
     box-shadow: 0px 10px 20px #999999;
   }
 
-  .game-port-start:hover div {
-    top: 93px;
+  .game-port-start:hover div, .game-port-end:hover div  {
+    top: 57px;
   }
 
   .death {
@@ -529,3 +540,4 @@
     0% {z-index: 2000; display: inline; opacity: 0; height: 100vh;}
     100% {z-index: 2000; display: inline; opacity: 1; height: 100vh;}
   }
+
